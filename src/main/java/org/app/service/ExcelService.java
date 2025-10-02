@@ -61,7 +61,7 @@ public class ExcelService {
 
             int articleRowIndex = 13;
             for (HouseConsigment entry: dto.getHouseConsigmentList()) {
-                String cui = entry.getIncadrareTarifara(); // ensure this is actually the CUI (e.g., "RO17581153" or "17581153")
+                String cui = entry.getConsigneeNumber(); // ensure this is actually the CUI (e.g., "RO17581153" or "17581153")
                 if (cui != null && !cui.trim().isEmpty()) {
                     try {
                         tvaClient.fetchCompanyNameByCui(cui.trim())
